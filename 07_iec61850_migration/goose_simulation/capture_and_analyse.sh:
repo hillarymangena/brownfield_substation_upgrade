@@ -1,0 +1,51 @@
+#!/bin/bash
+# ============================================================
+# GOOSE Capture and Analysis — Musina 33/11 kV
+# Captures GOOSE traffic on loopback, runs publisher/subscriber,
+# then analyses the pcap with tshark to verify retransmit timing.
+# ============================================================
+
+IFACE="lo"
+PCAP="07_iec61850_migration/goose_simulation/goose_capture.pcap"
+SCRIPT_DIR="07_iec61850_migration/goose_simulation"
+
+echo "=== Step 1: Start tshark capture on $IFACE ==="
+sudo tshark -i $IFACE \
+  -f "ether proto 0x88b8" \
+  -w $PCAP \
+  -a duration:20 &
+TSHARK_PID=$!
+sleep 1
+
+echo "=== Step 2: Start GOOSE subscriber in background ==="
+sudo python3 $SCRIPT_DIR/goose_subscriber.py $IFACE &
+SUB_PID=$!
+sleep 1
+
+echo "=== Step 3: Run GOOSE publisher (trip then reset) ==="
+sudo python3 $SCRIPT_DIR/goose_publisher.py $IFACE
+
+echo "=== Step 4: Wait for capture to finish ==="
+wait $TSHARK_PID
+kill $SUB_PID 2>/dev/null
+
+echo ""
+echo "=== Step 5: Analyse retransmit intervals from pcap ==="
+echo "Frame timestamps (relative):"
+tshark -r $PCAP \
+  -T fields \
+  -e frame.number \
+  -e frame.time_relative \
+  -e eth.src \
+  -e eth.dst \
+  2>/dev/null | head -20
+
+echo ""
+echo "=== Step 6: Count total GOOSE frames ==="
+FRAME_COUNT=$(tshark -r $PCAP 2>/dev/null | wc -l)
+echo "Total GOOSE frames captured: $FRAME_COUNT"
+echo "Expected: 12 (6 trip burst + 6 reset burst)"
+
+echo ""
+echo "Capture saved to: $PCAP"
+echo "Open in Wireshark: wireshark $PCAP"
