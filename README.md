@@ -5,7 +5,7 @@ This project is a fully simulated protection engineering review of an ageing 33/
 
 The simulated review covers network reconstruction from partial drawings, fault level studies under maximum and minimum source infeed, relay coordination from scratch using IEC 60255 IDMT curves, transformer differential and REF protection calculations, earthing and lightning SPD analysis against IEEE 80 and SANS 10313, SSEG impact quantification using OpenDSS, and an IEC 61850 GOOSE trip simulation with live Wireshark packet capture. A full deficiency register with risk ratings, root cause analysis, and a phased upgrade roadmap concludes the work.
 
-Every result, plot, and calculation is reproducible on any Linux machine with no licensed software required — demonstrating that rigorous protection engineering thinking does not depend on expensive tooling.
+Every result, plot, and calculation is reproducible on any Linux machine with no licensed software required.
 
 **Limitations:** pandapower and OpenDSS lack the integrated protection coordination and transient stability modules found in commercial platforms such as DIgSILENT PowerFactory or ETAP, which would allow dynamic simulation and full IEC 61850 SCL validation within a single validated environment — the natural next step for utility-grade work.
 
