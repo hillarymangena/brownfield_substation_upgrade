@@ -5,9 +5,11 @@
 # then analyses the pcap with tshark to verify retransmit timing.
 # ============================================================
 
-IFACE="lo"
-PCAP="07_iec61850_migration/goose_simulation/goose_capture.pcap"
+IFACE="dummy0"
+PCAP="/home/kali/Desktop/Substation +  Automation/GitProjectsX3/brownfield_substation_upgrade/07_iec61850_migration/goose_simulation/goose_capture.pcap"
 SCRIPT_DIR="07_iec61850_migration/goose_simulation"
+
+mkdir -p 07_iec61850_migration/goose_simulation
 
 echo "=== Step 1: Start tshark capture on $IFACE ==="
 sudo tshark -i $IFACE \
