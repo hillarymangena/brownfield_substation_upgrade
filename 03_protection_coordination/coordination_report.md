@@ -45,5 +45,5 @@ The SEL‑351S is configured with a forward directional element (busbar → feed
 
 **Implementation cost:** ZAR 15 000 (injection test, relay re‑setting for TMS and incomer I>>, plus SEL‑351S directional element configuration).
 
-**Prepared by:** Protection Engineer, Limpopo Municipality  
+**Prepared by:** Mangena
 **Next step:** Transformer protection (Section 4)
