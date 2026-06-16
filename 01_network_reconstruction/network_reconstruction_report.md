@@ -69,6 +69,5 @@ Standard IEC CT ratios considered:
 
 ---
 
-**Prepared by:** Protection Engineer, Limpopo Municipality  
-**Reviewed by:** [Senior Engineer, to be confirmed]  
+**Prepared by:** Mangena
 **Next step:** Fault Level Study (Section 2)
