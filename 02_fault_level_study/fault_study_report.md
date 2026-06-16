@@ -33,7 +33,7 @@ The fault current attenuation profile shows that for a fault near the 11 kV bu
 - Disable instantaneous elements on all CDG relays until coordination is verified.
 - Install or commission SEF protection on all feeders.
 
-**Prepared by:** Protection Engineer, Limpopo Municipality  
+**Prepared by:** Mangena  
 **Next step:** Section 3 — Protection Coordination
 
 
