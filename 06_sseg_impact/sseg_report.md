@@ -22,5 +22,5 @@ The connection of 1.2 MVA rooftop solar on F3 increases near‑end fault level
 - Implement transfer‑trip for SSEG laterals to ensure simultaneous disconnection.
 - Adjust anti‑islanding settings to less than 0.2 s.
 
-**Prepared by:** Protection Engineer, Limpopo Municipality  
+**Prepared by:** Mangena
 **Next step:** IEC 61850 migration (Section 7)
