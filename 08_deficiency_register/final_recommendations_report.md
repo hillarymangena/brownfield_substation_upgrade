@@ -24,4 +24,4 @@ Deficiencies D‑002 and D‑003: identical TMS settings on all feeder relays co
 
 **Total estimated investment: ZAR 427 000** to bring the substation to full compliance and prevent a recurrence of the incident.
 
-**Prepared by:** Protection Engineer, Limpopo Municipality
+**Prepared by:** Hillary
