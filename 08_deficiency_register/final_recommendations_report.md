@@ -22,6 +22,6 @@ Deficiencies D‑002 and D‑003: identical TMS settings on all feeder relays co
 - Transformer differential + REF (D‑005)
 - SCADA upgrade to IEC 61850 (D‑008)
 
-**Total estimated investment: ZAR 427 000** to bring the substation to full compliance and prevent a recurrence of the incident.
+Bill Estimate to be finalised.
 
 **Prepared by:** Hillary
