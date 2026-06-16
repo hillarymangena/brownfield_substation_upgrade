@@ -40,5 +40,5 @@ The earthing grid, last tested in 1998, is likely undersized for the expanded su
 - Earthing audit and grid extension: ZAR 35 000.
 - Replacement of 3 × 33 kV arresters (Class 3): ZAR 12 000.
 
-**Prepared by:** Protection Engineer, Limpopo Municipality  
+**Prepared by:** Mangena
 **Next step:** SSEG impact analysis (Section 6)
